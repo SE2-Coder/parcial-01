@@ -8,11 +8,13 @@ char **ptrNames, **ptrDocs, **ptrEdad, **ptrProfession, **ptrNationality;
 int nCols = 30, nRows;
 
 void getUserData();
+void showUserData(char**, int, int);
 
 int main()
 {
     
     getUserData();
+    showUserData(ptrNames, nRows, nCols);
     
     return 0;
 }
@@ -47,10 +49,25 @@ void getUserData()
         cin >> ptrDocs[i];
         cout << "Edad: "; 
         cin >> ptrEdad[i];
+        cin.ignore(100000,'\n');
         cout << "Profesion: "; 
         cin.getline(ptrProfession[i],nCols,'\n');
-        cin.ignore(100000,'\n');
+        //cin.ignore(100000,'\n');
         cout << "Nationalidad: "; 
         cin.getline(ptrNationality[i],nCols,'\n');
+    }
+    
+}
+
+void showUserData(char**, int, int)
+{
+    
+    for (int i = 0; i < nRows; i++)
+    {
+        cout << "Nombre: " << *(ptrNames+i) << endl;
+        cout << "Documento: " << *(ptrDocs+i) << endl;
+        cout << "Edad: " << *(ptrEdad+i) << endl;
+        cout << "Profesion: " << *(ptrProfession+i) << endl;
+        cout << "Nacionalidad: " << *(ptrNationality+i) << endl << endl;
     }
 }
