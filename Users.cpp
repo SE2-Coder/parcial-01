@@ -4,17 +4,21 @@
 
 using namespace std;
 
+char forms[][20] = {{"Nombre"},{"Documento"},{"Edad"},{"Profesion"},{"Nacionalidad"}};
 char **ptrNames, **ptrDocs, **ptrEdad, **ptrProfession, **ptrNationality;
 int nCols = 30, nRows;
 
 void getUserData();
 void showUserData(char**, int, int);
+bool compareUserData(char**, int, int);
 
 int main()
 {
     
     getUserData();
     showUserData(ptrNames, nRows, nCols);
+    bool repeat = compareUserData(ptrNames, nRows, nCols);
+    cout << endl << repeat;
     
     return 0;
 }
@@ -68,6 +72,25 @@ void showUserData(char**, int, int)
         cout << "Documento: " << *(ptrDocs+i) << endl;
         cout << "Edad: " << *(ptrEdad+i) << endl;
         cout << "Profesion: " << *(ptrProfession+i) << endl;
-        cout << "Nacionalidad: " << *(ptrNationality+i) << endl << endl;
+        cout << "Nacionalidad: " << *(ptrNationality+i) << endl;
     }
+}
+
+bool compareUserData(char**, int, int)
+{
+    bool repeat = false;
+    for (int i = 0; i < nRows; i++)
+    {
+        for (int j = 1; j < nRows; i++)
+        {
+            if (*(ptrNames+i)==*(ptrNames+j) || *(ptrDocs+i)==*(ptrDocs+j))
+            {
+                repeat = true;
+                break;
+            }
+            
+        }
+    }
+
+    return repeat;
 }
