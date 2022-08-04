@@ -1,16 +1,18 @@
+#include "Users.h"
 #include<iostream>
 #include<string.h>
 #include<conio.h>
 
 using namespace std;
+using namespace systemUsers;
 
-char forms[][20] = {{"Nombre"},{"Documento"},{"Edad"},{"Profesion"},{"Nacionalidad"}};
+/*char forms[][20] = {{"Nombre"},{"Documento"},{"Edad"},{"Profesion"},{"Nacionalidad"}};
 char **ptrNames, **ptrDocs, **ptrEdad, **ptrProfession, **ptrNationality;
 int nCols = 30, nRows;
 
 void getUserData();
 void showUserData(char**, int, int);
-bool compareUserData(char**, int, int);
+bool compareUserData(char**, int, int);*/
 
 int main()
 {
@@ -23,7 +25,7 @@ int main()
     return 0;
 }
 
-void getUserData()
+/*void getUserData()
 {
     cout << "Digite el numero de usuarios que desea registrar: ";
     cin >> nRows;
@@ -93,4 +95,4 @@ bool compareUserData(char**, int, int)
     }
 
     return repeat;
-}
+}*/
