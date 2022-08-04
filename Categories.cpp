@@ -98,7 +98,7 @@ void addCategories()
     }
 }
 
-void showCategoriesAdd(char **ptrAddCategories, int adRows, int cols)
+void showCategoriesAdd(char **ptrAddCategories, int adRows, int adCols)
 {
     cout << "\nLas categorias para agregar a la lista son:\n\n";
     int catNum = 1;
