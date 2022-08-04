@@ -1,17 +1,19 @@
+#include "Transactions.h"
 #include<iostream>
 #include<string.h>
 #include<conio.h>
 #include<ctime>
 
 using namespace std;
+using namespace TrFuntions;
 
 //time_t timeNow = time(0);
 
-char** ptrTransactions; char**ptrTimeDate; int nRows, nCols = 50;
+/*char** ptrTransactions; char**ptrTimeDate; int nRows, nCols = 50;
 //char value = 0;
 
 void getTimeNow ();
-void showTransactions();
+void showTransactions();*/
 
 int main()
 {   
@@ -20,7 +22,7 @@ int main()
     return 0;
 }
 
-void getTimeNow ()
+/*void getTimeNow ()
 {
     time_t timeNow = time(0);
     char* dt = ctime(&timeNow);
@@ -57,4 +59,4 @@ void showTransactions()
         cout << ptrTimeDate[i] << endl;
     }
     
-}
+}*/
