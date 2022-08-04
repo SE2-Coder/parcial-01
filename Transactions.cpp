@@ -14,12 +14,7 @@ void getTimeNow ();
 void showTransactions();
 
 int main()
-{
-   /* time_t timeNow = time(0);
-    
-    char* dt = ctime(&timeNow);
-    
-    cout << dt;*/
+{   
     getTimeNow ();
     showTransactions();
     return 0;
