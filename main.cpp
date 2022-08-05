@@ -13,7 +13,7 @@ using namespace TrFuntions;
 
 int main()
 {
-    int a, b;
+    int a, b;//vars
     do
     {
         cout << "\n1) Usuarios \n";
