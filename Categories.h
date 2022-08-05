@@ -9,7 +9,7 @@ namespace categoriesFuntions
                         {"VIVIENDA"},
                         {"VESTUARIO"},
                         {"SALUD"},
-                        {"ENTRENAMIENTO"}};//This array defines the system default categories.
+                        {"ENTRETENIMIENTO"}};//This array defines the system default categories.
     
     char **ptrAddCategories; //This pointer points to the array of arrays of the added categories.
     int adRows = 0, 
