@@ -21,16 +21,16 @@ int main()
         cout << "3) Transacciones \n";
         cout << "4) Busqueda \n";
         cout << "5) Salir \n";
-        cout << "Por favor seleccione una opcion: ";
+        cout << "\nPor favor seleccione una opcion: ";
         cin >> a;
         
         switch (a)
         {
             case 1:
                 int b;
-                cout << "1) Registrar 1 o más usuarios. \n";
+                cout << "\n1) Registrar 1 o mas usuarios. \n";
                 cout << "2) Consultar los usuarios del sistema. \n";
-                cout << "Indique su opcion: ";
+                cout << "\nIndique su opcion: ";
                 cin >> b;
                 
                 switch (b)
@@ -51,32 +51,46 @@ int main()
                 cout << "\n1)Registrar categorias. \n";
                 cout << "2)Listar las categorias por defecto. \n";
                 cout << "3)Listar categorías completas \n";
-                cout << "Indique su opcion: ";
+                cout << "\nIndique su opcion: ";
                 cin >> c;
 
                 switch (c)
                 {
-                case 1:
-                    addCategories();
-                    break;
-                
-                case 2:
-                    showCategories(categories);
-                    break;
-                case 3:
-                    if (bool compare = compareCat(ptrAddCategories, adRows, cols, categories) == true)
-                    {
+                    case 1:
+                        addCategories();
+                        break;
+                    
+                    case 2:
                         showCategories(categories);
-                    }
-                    else
-                    {
-                        showCategoriesAdd(ptrAddCategories, (5+adRows), cols);
-                    }
-                    break;
+                        break;
+                    case 3:
+                        if (bool compare = compareCat(ptrAddCategories, adRows, cols, categories) == true)
+                        {
+                            showCategories(categories);
+                        }
+                        else
+                        {
+                            showCategoriesAdd(ptrAddCategories, (5+adRows), cols);
+                        }
+                        break;
                 }
-            case 3:
+                break;
             
-
+            case 3:
+            int t;
+            cout << "\n1)Generar transaccion. \n";
+            cout << "2)Ver historial de transacciones. \n";
+            cout << "\nIndique su opcion: ";
+            cin >> t;
+            switch(t)
+            {
+                case 1:
+                    getTimeNow ();
+                    break;
+                case 2:
+                    showTransactions();
+                    break;
+            }
         }
         
     }
