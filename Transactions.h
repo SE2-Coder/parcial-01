@@ -12,9 +12,7 @@ namespace TrFuntions
     {
         time_t timeNow = time(0);
         char* dt = ctime(&timeNow);
-        //char* p = dt;
-        cout << dt;
-        
+                
         cout << "Numero de transacciones que quiere realizar: ";
         cin >> nRows;
         
