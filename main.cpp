@@ -27,7 +27,23 @@ int main()
         switch (a)
         {
             case 1:
-                getUserData();
+                int b;
+                cout << "1) Registrar 1 o más usuarios: \n";
+                cout << "2) Consultar los usuarios del sistema: \n";
+                cout << "3) Por favor indique su opcion: ";
+                cin >> b;
+                
+                switch (b)
+                {
+                    case 1:
+                    getUserData();
+                    break;
+
+                    case 2:
+                    showUserData(ptrNames, uRows, uCols);
+                    break;
+                }
+                
                 break;
                     
         }
