@@ -64,7 +64,7 @@ namespace systemUsers
                 ptrNationality[i] = new char[uCols];    
             }
             
-            cout << "\nDigite los datos del usuario o los usuarios que desea registrar.\n";
+            cout << "\nDigite los datos del usuario o los usuarios que desea registrar.\n\n";
             for (int i = 0; i < uRows; i++)
             {
                 cin.ignore(100000,'\n');
