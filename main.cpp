@@ -28,9 +28,9 @@ int main()
         {
             case 1:
                 int b;
-                cout << "1) Registrar 1 o más usuarios: \n";
-                cout << "2) Consultar los usuarios del sistema: \n";
-                cout << "3) Por favor indique su opcion: ";
+                cout << "1) Registrar 1 o más usuarios. \n";
+                cout << "2) Consultar los usuarios del sistema. \n";
+                cout << "Indique su opcion: ";
                 cin >> b;
                 
                 switch (b)
@@ -45,7 +45,38 @@ int main()
                 }
                 
                 break;
-                    
+
+            case 2:
+                int c;
+                cout << "\n1)Registrar categorias. \n";
+                cout << "2)Listar las categorias por defecto. \n";
+                cout << "3)Listar categorías completas \n";
+                cout << "Indique su opcion: ";
+                cin >> c;
+
+                switch (c)
+                {
+                case 1:
+                    addCategories();
+                    break;
+                
+                case 2:
+                    showCategories(categories);
+                    break;
+                case 3:
+                    if (bool compare = compareCat(ptrAddCategories, adRows, cols, categories) == true)
+                    {
+                        showCategories(categories);
+                    }
+                    else
+                    {
+                        showCategoriesAdd(ptrAddCategories, (5+adRows), cols);
+                    }
+                    break;
+                }
+            case 3:
+            
+
         }
         
     }
