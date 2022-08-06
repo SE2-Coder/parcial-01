@@ -11,6 +11,8 @@ using namespace systemUsers;
 using namespace categoriesFuntions;
 using namespace TrFuntions;
 
+
+
 int main()
 {
     int a, b;//vars
@@ -95,5 +97,14 @@ int main()
         
     }
     while(a != 5);
+    
+    freeMem(ptrAddCategories, adRows, cols);//Free categorie's mem
+    
+    freeMemUsers(ptrNames, ptrDocs, ptrEdad, ptrProfession, ptrNationality,
+    ptrDbDocs, uRows, uCols); //Free user's mem
+
+    freeMemTr(ptrTransactions, ptrTimeDate, nRows, nCols);//Free transaction's mem.
+       
+
     return 0;
 }
