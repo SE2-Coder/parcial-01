@@ -106,5 +106,24 @@ namespace systemUsers
         }
     }
 
+    void freeMemUsers(char **ptrNames, char **ptrDocs, char **ptrEdad, char **ptrProfession, char **ptrNationality,
+    char **ptrDbDocs, int uRows, int uCols)
+    {
+        for (int i = 0; i < uRows; i++)
+        {
+            delete[] ptrNames[i];
+            delete[] ptrDocs[i];
+            delete[] ptrEdad[i];
+            delete[] ptrProfession[i];
+            delete[] ptrNationality[i];
+            delete[] ptrDbDocs[i];
+        }
+        delete[] ptrNames;
+        delete[] ptrDocs;
+        delete[] ptrEdad;
+        delete[] ptrProfession;
+        delete[] ptrNationality;
+        delete[] ptrDbDocs;
+    }
     
 }
