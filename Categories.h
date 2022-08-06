@@ -82,5 +82,14 @@ namespace categoriesFuntions
             
             cout << catNum++ << ")\t" << *(ptrAddCategories + i) << endl;
         }
-    }   
+    }
+    
+    void freeMem(char **ptrAddCategories, int adRows, int adCols)
+    {
+        for (int i=0; i < adRows; i++)
+        {
+            delete[] ptrAddCategories[i];
+        }
+        delete[] ptrAddCategories;
+    }
 }
