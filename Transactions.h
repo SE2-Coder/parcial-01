@@ -44,4 +44,17 @@ namespace TrFuntions
         }
         
     }
+
+    void freeMemTr(char** ptrTransactions, char**ptrTimeDate, int nRows, int nCols)
+    {
+        for (int i = 0; i < nRows; i++)
+        {
+            delete[] ptrTransactions[i];
+            delete[] ptrTimeDate[i];
+        } 
+
+        delete[] ptrTransactions;
+        delete[] ptrTimeDate;
+    }
+
 }
